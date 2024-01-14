@@ -11,9 +11,8 @@ const apiDoc = require('./api/api-doc');
 const apiKeys = require('./api/security/api-keys');
 const app = express();
 
-console.log('############env ', process.env.NODE_ENV, process.env.PORT);
-
-app.listen(process.env.PORT || '3000');
+const port = process.env.PORT || '3000';
+app.listen(port);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -23,7 +22,7 @@ app.use(methodOverride());
 
 // OpenAPI UI
 app.use(
-	'/api-documentation',
+	'/api-docs',
 	swaggerUi.serve,
 	swaggerUi.setup(null, {
 		swaggerOptions: {
@@ -42,17 +41,7 @@ initialize({
 			res.status(err.status).send(err);
 		}
 		next(err);
-	},
-//	securityHandlers: {
-//		keyScheme: (req, scopes, definition) => {
-//			const auth = apiKeys.validate(req.header('x-api-key'), req.header('x-api-secret'));
-//			if (!auth) throw {
-//				status: 401,
-//				message: 'Unauthorized'
-//			};
-//			return Promise.resolve(auth);
-//		}
-//	}
+	}
 });
 
 const recentRequests = [];
@@ -62,10 +51,8 @@ const recentRequests = [];
 //		const now = moment().utc().valueOf();
 //		const recentRequestCount = recentRequests.filter(
 //			timestamp => (now - 10000) - timestamp < 0
-//		) .length;
-//
+//		).length;
 //		recentRequests.push(now);
-//
 //		if (recentRequestCount >= 5) {
 //			res.setHeader('Retry-After', 10);
 //			return res.sendStatus(429);
@@ -77,9 +64,7 @@ const recentRequests = [];
 //	next();
 //});
 
-console.log('App running on port http://localhost:3000');
-console.log('OpenAPI documentation available in http://localhost:3000/api-documentation');
-
+console.log(`App running on port ${port}`);
 module.exports = app;
 
 
