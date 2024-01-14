@@ -13,7 +13,7 @@ const app = express();
 
 process.env.NODE_ENV = 'production';
 
-app.listen(3333);
+app.listen(3000);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -27,7 +27,7 @@ app.use(
 	swaggerUi.serve,
 	swaggerUi.setup(null, {
 		swaggerOptions: {
-			url: 'http://localhost:3333/api-docs'
+			url: 'http://localhost:3000/api-docs'
 		}
 	})
 );
@@ -57,28 +57,28 @@ initialize({
 
 const recentRequests = [];
 
-app.use((req, res, next) => {
-	try {
-		const now = moment().utc().valueOf();
-		const recentRequestCount = recentRequests.filter(
-			timestamp => (now - 10000) - timestamp < 0
-		) .length;
+//app.use((req, res, next) => {
+//	try {
+//		const now = moment().utc().valueOf();
+//		const recentRequestCount = recentRequests.filter(
+//			timestamp => (now - 10000) - timestamp < 0
+//		) .length;
+//
+//		recentRequests.push(now);
+//
+//		if (recentRequestCount >= 5) {
+//			res.setHeader('Retry-After', 10);
+//			return res.sendStatus(429);
+//		}
+//	} catch (err) {
+//		console.error(err);
+//		return res.sendStatus(500);
+//	}
+//	next();
+//});
 
-		recentRequests.push(now);
-
-		if (recentRequestCount >= 5) {
-			res.setHeader('Retry-After', 10);
-			return res.sendStatus(429);
-		}
-	} catch (err) {
-		console.error(err);
-		return res.sendStatus(500);
-	}
-	next();
-});
-
-console.log('App running on port http://localhost:3333');
-console.log('OpenAPI documentation available in http://localhost:3333/api-documentation');
+console.log('App running on port http://localhost:3000');
+console.log('OpenAPI documentation available in http://localhost:3000/api-documentation');
 
 module.exports = app;
 
