@@ -1,0 +1,27 @@
+[
+	{
+		"key": "2a36dc75-4de1-495b-acf4-e30078c27cfa",
+		"secret": "2a36dc75-4de1-495b-acf4-e30078c27cfa",
+		"user": "someone1@somewhere.com"
+	},
+	{
+		"key": "e3f7ef40-45f6-408e-9b22-b22cf871a147",
+		"secret": "0c918d92-c00e-4d1f-83e1-0a2a343e9526",
+		"user": "someone2@somewhere.com"
+	},
+	{
+		"key": "b30b1f96-0525-4ca5-a845-64bf94521dac",
+		"secret": "8609aa59-c308-45db-9bb1-3358551b4e13",
+		"user": "someone3@somewhere.com"
+	},
+	{
+		"key": "439e9899-489c-4cb3-adab-a39ffa74c272",
+		"secret": "8d05fb5e-ff9b-404b-9eac-c53a75761572",
+		"user": "someone4@somewhere.com"
+	},
+	{
+		"key": "63a0cf4d-7d1e-4cdf-adf8-d6d297e34675",
+		"secret": "9a9ace3a-f49e-4d29-ab22-cc1e009ebb52",
+		"user": "someone5@somewhere.com"
+	}
+]

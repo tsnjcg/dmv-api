@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<drivers>
+	<driver type="commercial">
+		<id>3A311D11-BDDD-425C-87F1-055FABE46C4A</id>
+		<lastName>Fyldes</lastName>
+		<firstName>Ingmar</firstName>
+		<dateOfBirth>1976-01-16</dateOfBirth>
+		<address>29631 Ridgeview Street</address>
+		<city>South Lake Tahoe</city>
+		<state>CA</state>
+		<zipCode>96154</zipCode>
+		<visionRestriction>true</visionRestriction>
+	</driver>
+	<driver type="motorist" active="true">
+		<id>69058CFA-173A-4934-9988-056077D01A52</id>
+		<lastName>Toppin</lastName>
+		<firstName>Haroun</firstName>
+		<dateOfBirth>1977-02-25</dateOfBirth>
+		<address>50 Kennedy Pass</address>
+		<city>Albuquerque</city>
+		<state>NM</state>
+		<zipCode>87190</zipCode>
+		<visionRestriction>true</visionRestriction>
+	</driver>
+	<driver>
+		<id>1AAA1D1A-0095-4C7E-BAC8-05B1C0DF7A64</id>
+		<lastName>Lanchbery</lastName>
+		<firstName>Janka</firstName>
+		<dateOfBirth>1996-10-08</dateOfBirth>
+		<address>315 Mendota Terrace</address>
+		<city>Mountain View</city>
+		<state>CA</state>
+		<zipCode>94042</zipCode>
+		<visionRestriction>true</visionRestriction>
+	</driver>
+</drivers>
