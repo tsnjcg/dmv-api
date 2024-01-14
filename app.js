@@ -11,9 +11,9 @@ const apiDoc = require('./api/api-doc');
 const apiKeys = require('./api/security/api-keys');
 const app = express();
 
-process.env.NODE_ENV = 'production';
+console.log('############env ', process.env.NODE_ENV, process.env.PORT);
 
-app.listen(3000);
+app.listen(process.env.PORT || '3000');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
