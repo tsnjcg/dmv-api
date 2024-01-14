@@ -26,7 +26,7 @@ app.use(
 	swaggerUi.serve,
 	swaggerUi.setup(null, {
 		swaggerOptions: {
-			url: 'http://localhost:3000/api-docs'
+			url: `${process.env.BASE_URL || `http://localhost:${port}`}/api-docs`
 		}
 	})
 );
@@ -66,12 +66,3 @@ const recentRequests = [];
 
 console.log(`App running on port ${port}`);
 module.exports = app;
-
-
-
-
-
-
-
-
-
